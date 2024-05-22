@@ -1,13 +1,48 @@
 #include "main.h"
 
+
+#include <stdio.h>
+
+
 /**
- * add - Adds two values
- * @n1: The first number to computed
- * @n2: The second number to be computed
- * Return: Integer value
+ * print_to_98 - print a program to 98
+ * @n: The number to start printing
+ * Return: Always 0.
  */
 
-int add(int n1, int n2)
 
+void print_to_98(int n)
 {
-	return (n1 + n2);
+	if (n <= 98)
+	{
+	for (; n <= 98; n++)
+	{
+	if (n == 98)
+	{
+	printf("%d", n);
+	printf("\n");
+	break;
+	}
+	else
+	{
+	printf("%d, ", n);
+	}
+	}
+	}
+	else
+	{
+	for (; n >= 98; n--)
+	{
+	if (n == 98)
+	{
+	printf("%d", n);
+	printf("\n");
+	break;
+	}
+	else
+	{
+		printf("%d, ", n);
+	}
+	}
+	}
+}
