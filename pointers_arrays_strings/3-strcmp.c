@@ -1,19 +1,25 @@
 #include "main.h"
 /**
- * _strcmp - compares 2 strings
- * @s1: string 1
- * @s2: string 2
- * Return: Always 0
+ * _strspn - gets the length of a prefix substring
+ * @s: initial segment
+ * @accept: bytes
+ * Return: Always a
 */
-
-int _strcmp(char *s1, char *s2)
+unsigned int _strspn(char *s, char *accept)
 {
-	int a;
+	int a, b;
 
-	for (a = 0; s1[a] != '\0' && s2[a] != '\0'; a++)
+	for (a = 0; s[a] != '\0'; a++)
 	{
-		if (s1[a] != s2[a])
-			return (s1[a] - s2[a]);
+		for (b = 0; accept[b] != '\0'; b++)
+		{
+			if (s[a] == accept[b])
+			{
+				break;
+			}
+		}
+		if (accept[b] == '\0')
+			break;
 	}
-	return (0);
+	return (a);
 }
