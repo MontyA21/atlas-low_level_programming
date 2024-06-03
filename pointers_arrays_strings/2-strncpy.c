@@ -1,20 +1,23 @@
 #include "main.h"
 /**
- * _strchr - locates character
- * @s: array strings
- * @c: character to be found
+ * _strncpy - copies two strings
+ * @dest: pointer
+ * @src: source pointer
+ * @n: int variable
  * Return: Always 0
 */
-char *_strchr(char *s, char c)
-{
-	int a;
 
-	for (a = 0; s[a] != '\0'; a++)
+char *_strncpy(char *dest, char *src, int n)
+{
+	int a = 0, b = 0;
+
+	for (; a < n && src[a] != '\0'; a++)
+		;
+	for (; b < a && src[b] != '\0'; b++)
 	{
-		if (s[a] == c)
-			return (&s[a]);
+		dest[b] = src[b];
 	}
-	if (c == '\0')
-		return (&s[a]);
-	return (0);
+	for (; b < n; b++)
+		dest[b] = '\0';
+	return (dest);
 }
