@@ -1,13 +1,23 @@
 #include "main.h"
+
 /**
- * cap_string - capatlizing all first letters
- * @str: string pointer
- * Return: Always 0
-*/
+  * puts2 - Prints every other character of a string
+  * @str: The string
+  * Return: Void
+  */
 
-char *cap_string(char *str)
+void puts2(char *str)
 {
-	int a:
+	int i;
+	int j = 0;
 
-	for (a = 0 ; str[a] != '\0'; a++)
+	while (str[j] != '\0')
 	{
+		j++;
+	}
+	for (i = 0; i < j; i += 2)
+	{
+		_putchar(str[i]);
+	}
+	_putchar('\n');
+}
